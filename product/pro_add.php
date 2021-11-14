@@ -3,8 +3,8 @@
 
 <body>
   商品追加ページ
-  <form method="POST" action='pro_add_check.php' enctype='multipart/form-data'>
-    <!-- enctype='multipart/form-data' : 1回のHTTP通信で、複数の種類（テキストやファイルなど）を一度に扱うことができます。 -->
+  <form method="POST" action="pro_add_check.php" enctype='multipart/form-data'>
+  <!-- enctype='multipart/form-data' : 1回のHTTP通信で、複数の種類（テキストやファイルなど）を一度に扱うことができます。 -->
     商品名を入力してください
     <input type="text" name="name">
     <br>
@@ -18,5 +18,4 @@
     <input type="submit" value="確定">
   </form>
 </body>
-
-</html> 
+</html>
