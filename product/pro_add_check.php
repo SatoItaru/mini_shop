@@ -27,6 +27,23 @@ if ($pro_name == '') {
   <br>
 EOD;
 }
+// 画像の取り扱い
+// $pro_image = $_FILES['image'];
+// $pro_image['size'] 画像のサイズ、単位はバイト
+// $pro_image['temp_name']　仮にアップロードされている画像本体の場所と名前
+// $pro_image['name']　画像のファイル名
+// move_uploaded_file(移動元、移動先);
+// [/]フォルダの区切り
+// [.]プログラムと同じ階層のフォルダ
+
+if ($pro_image['size'] > 0) {
+  if ($pro_image['size'] > 1000000) {
+    echo '画像サイズが大きすぎます..';
+  } else {
+    move_uploaded_file($pro_image['tmp_name'], './images/' . $pro_image['name']);
+    echo '<img width="100" src="./images/' . $pro_image['name'] . '"><br>';
+  }
+}
 
 if ($pro_name == '' || preg_match('/^[0-9]+$/', $pro_price) == 0 || $pro_image['size'] > 1000000) {
   echo <<<EOD
@@ -34,7 +51,7 @@ if ($pro_name == '' || preg_match('/^[0-9]+$/', $pro_price) == 0 || $pro_image['
     <input type="button" onclick="history.back()" value="戻る">
   </form>
 EOD;
-} else{
+} else {
   echo <<<EOD
   <form method="POST" action="pro_add_done.php">
     <input type="hidden" name="name" value="$pro_name">
