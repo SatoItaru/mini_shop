@@ -1,15 +1,15 @@
 <?php
 
 $pro_id = $_POST['pro_code'];
-// !? pro_codeはどこから出てきた？
 
 if (isset($_POST['add']) == true) {
+  //addが選択されていたら
 
   header('Location:pro_add.php');
   exit();
 } elseif ($pro_id == null) {
 
-  header('Location:$pro_ng.php');
+  header('Location:pro_ng.php');
   exit();
 } else {
 

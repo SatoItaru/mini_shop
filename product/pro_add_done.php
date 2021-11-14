@@ -10,18 +10,18 @@ try {
 
   $dbh = connectDB();
 
-  $sql = 'insert into product (name, price, image) values (?,?,?,)';
+  $sql = 'insert into product (name, price, image) values (?, ?, ?)';
   $stmt = $dbh->prepare($sql);
 
-  $data[] = $pro_name;
-  $data[] = intval($pro_price);
+  $data[] = $pro_name; //?にセットしたい物を記入する。
+  $data[] = intval($pro_price); //textのtypeで入力していたものをintval()を使うことで、整数に変換してから保存している。
   $data[] = $pro_image_name;
 
   $stmt->execute($data);
 
   $dbh = null;
 
-  echo $pro_name . '　を追加しました<br>';
+  echo $pro_name . ' を追加しました<br>';
 
 } catch (Exception $e) {
   echo '何かしらのエラーが発生しています';
