@@ -20,6 +20,7 @@ try {
   $stmt->execute($data);
 
   $dbh = null;
+  //   connectDB();との接続切る
 
   echo $pro_name . ' を追加しました<br>';
 
