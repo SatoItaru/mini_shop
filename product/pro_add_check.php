@@ -6,7 +6,7 @@ $post = sanitize($_POST);
 
 $pro_name = $post['name'];
 $pro_price = $post['price'];
-$pro_image = $post['image'];
+$pro_image = $_FILES['image'];
 
 if ($pro_name == '') {
   echo '商品名を入力してください..<br>';
