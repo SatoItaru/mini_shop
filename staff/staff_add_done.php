@@ -7,15 +7,15 @@ try {
   $staff_name = $_POST['name'];
   $staff_pass = $_POST['pass'];
 
-  $dbh = connectDB();
+  $dbh = connectDB();//DBに接続
 
   $sql = 'insert into staff (name, password) values (?, ?)';
   $stmt = $dbh->prepare($sql);
-  $data[] = $staff_name;
+  $data[] = $staff_name; //[]配列にする
   $data[] = $staff_pass;
-  $stmt->execute($data);
+  $stmt->execute($data);//実行する
 
-  $dbh = null;
+  $dbh = null;//DBの接続を切る
 } catch (Exception $e) {
   echo '何かしらのエラーが発生しています';
   echo $e->getMessage();

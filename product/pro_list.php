@@ -45,7 +45,7 @@ EOD;
       <input type="submit" name="add" value="追加">
       <input type="submit" name="detail" value="詳細">
       <input type="submit" name="edit" value="編集">
-      <input type="submit" name="delete" value="削除">
+      <input type="submit" name="delete" value="削除">node
       <br>
       <a href="../staff/staff_logout.php">ログアウトする</a>
     </form>

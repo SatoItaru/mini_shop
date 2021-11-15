@@ -7,7 +7,12 @@
   require_once('../common/common.php');
 
   session_start();
+  // セッション開始方法
+  // session_id が発行され、Cookie に保存される
   session_regenerate_id(true);
+  // 新しく生成したセッションIDと置き換える
+  // session_start(); の直後に記述する必要あり
+  // 毎回合言葉を変えることで対策をする。
 
   try {
 
