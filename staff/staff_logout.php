@@ -7,8 +7,9 @@ if (isset($_COOKIE[session_name()]) == true) {
   setcookie(session_name(), '', time() - 42000, '/');
 }
 // $_COOKIEは現在のスクリプトに HTTP クッキーから渡された変数の連想配列
+//setcookie() クッキーを送信する
 
-session_destroy();
+session_destroy();//セッションを破壊する
 
 echo <<<EOD
   ログアウトしました<br>
