@@ -29,6 +29,7 @@
       $image = '';
     } else {
       $image = '<image width="100" src="../product/images/' . $pro_image . '"><br>';
+      // データを入れるだけで表示はされていない
     }
   } catch (Exception $e) {
     echo '何かしらのエラーが発生しています';

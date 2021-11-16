@@ -2,17 +2,17 @@
 
 require_once('../common/common.php');
 
-// 以下の内容はコメントアウトのまま模写して下さい
-// session_start();
-// session_regenerate_id(true);
-// if (isset($_SESSION['login']) == false) {
-//   echo 'ログインしていません
-//        <br>
-//        <a href="../staff/staff_login.php">ログインページへ</a>';
-//   exit();
-// } else {
-//   echo $_SESSION['staff_name'] . ' はログイン中です<br>';
-// }
+//  以下の内容はコメントアウトのまま模写して下さい
+session_start();
+session_regenerate_id(true);
+if (isset($_SESSION['login']) == false) {
+   echo 'ログインしていません
+        <br>
+        <a href="../staff/staff_login.php">ログインページへ</a>';
+   exit();
+ } else {
+   echo $_SESSION['staff_name'] . ' はログイン中です<br>';
+ }
 
 try {
 
